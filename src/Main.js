@@ -3,40 +3,44 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import { useNavigate } from "react-router-dom";
 
+//main page function 
 function Main({
+  note,
   noteList,
+  newNoteAdded,
   saveNote,
   deleteNote,
-  newNoteAdded,
+  currentNote,
   enableSide,
   getCurrentNote,
-  currentNote,
-  note,
+
 }) {
-  const [noteContent, setNoteContent] = useState("");
-  const [date, setDate] = useState(Date.now());
-  const [title, setTitle] = useState("");
-  const [editing, setEditing] = useState(false);
   const navigate = useNavigate();
+  const [noteContent, setNoteContent] = useState("");
+  const [title, setTitle] = useState("");
+  const [date, setDate] = useState(Date.now());
+  const [editing, setEditing] = useState(false);
+  
 
   useEffect(() => {
-    console.log(getCurrentNote().body);
     console.log(getCurrentNote().title);
-    setNoteContent(getCurrentNote().body);
+    console.log(getCurrentNote().body);
     setTitle(getCurrentNote().title);
+    setNoteContent(getCurrentNote().body);
   }, [currentNote]);
 
+  //editing constructors
+  const handleEdit = () => {
+    setEditing(false);
+    navigate(`/notes/${currentNote}/edit`); 
+  }; 
+  
   const handleTitleChange = (event) => {
     setTitle(event.target.value);
   };
 
   const handleChange = (value) => {
     setNoteContent(value);
-  };
-
-  const handleEdit = () => {
-    setEditing(false);
-    navigate(`/notes/${currentNote}/edit`); 
   };
 
   const handleSaveNote = () => {
@@ -63,6 +67,7 @@ function Main({
     );
   }
 
+//main page formatting
   return (
     <>
       <div
@@ -98,16 +103,16 @@ function Main({
 
           <div id="rightTop">
             {editing ? (
-              <button onClick={handleEdit} id="editNote">
+              <button onClick={handleEdit} id="editNote"> 
                 Edit
               </button>
             ) : (
-              <button onClick={handleSaveNote}  id="saveNote">
+              <button onClick={handleSaveNote}  id="saveNote"> 
                 Save
               </button>
             )}
 
-            <button
+            <button // button for current note
               onClick={() => {
                 const currentNote = getCurrentNote();
                 if (currentNote) {
@@ -121,7 +126,7 @@ function Main({
           </div>
         </div>
 
-        {!editing ? (
+        {!editing ? ( //for editing notes
           <div id="noteEdit">
             <ReactQuill
               placeholder="Write your note here..."

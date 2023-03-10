@@ -272,7 +272,7 @@ body {
 .ql-container.ql-snow {
   border: none !important;
   height: calc(100vh-100);
-  border: 2px solid#EDEDED;
+  border: 2px solid#fb94c0;
   margin-left: -1px;
   padding: 0;
 }
@@ -281,7 +281,7 @@ body {
   border-right: none !important;
   border-left: none !important;
   border-top: none !important;
-  border-bottom: 2px solid#EDEDED !important;
+  border-bottom: 2px solid#fb94c0 !important;
 }
 
 /* #noteEdit.ql-placeholder {

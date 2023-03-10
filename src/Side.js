@@ -24,8 +24,8 @@ function Side({
   }, [setCurrentNote, noteList, useParams]);
 
   const options = {
+    month: "long", 
     year: "numeric",
-    month: "long",
     day: "numeric",
     hour: "numeric",
     minute: "numeric",

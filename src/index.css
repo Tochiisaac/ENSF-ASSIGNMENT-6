@@ -269,13 +269,6 @@ body {
   color: white;
 }
 
-.ql-toolbar.ql-snow { 
-  border-right: none !important;
-  border-left: none !important;
-  border-top: none !important;
-  border-bottom: 2px solid#fb94c0 !important;
-}
-
 /* #noteEdit.ql-placeholder {
   font-style: italic;
   color: black;

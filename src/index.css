@@ -269,14 +269,6 @@ body {
   color: white;
 }
 
-.ql-container.ql-snow {
-  border: none !important;
-  height: calc(100vh-100);
-  border: 2px solid#fb94c0;
-  margin-left: -1px;
-  padding: 0;
-}
-
 .ql-toolbar.ql-snow { 
   border-right: none !important;
   border-left: none !important;

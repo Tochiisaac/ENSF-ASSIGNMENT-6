@@ -220,7 +220,6 @@ body {
   background: none;
   border: none;
   color: black;
-  /* background-color: blueviolet; */
 }
 
 
@@ -267,6 +266,21 @@ body {
 #editNote:hover {
   background-color: #423C52;
   color: white;
+}
+
+.ql-container.ql-snow {
+  border: none !important;
+  height: calc(100vh-100);
+  border: 2px solid#EDEDED;
+  margin-left: -1px;
+  padding: 0;
+}
+
+.ql-toolbar.ql-snow { 
+  border-right: none !important;
+  border-left: none !important;
+  border-top: none !important;
+  border-bottom: 2px solid#EDEDED !important;
 }
 
 /* #noteEdit.ql-placeholder {

@@ -4,12 +4,11 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 
-// side functions
 function Side({
   noteList,
-  setCurrentNote,
-  currentNote,
   addNote,
+  currentNote,
+  setCurrentNote,
   newNoteAdded,
   textChange,
   text,
@@ -24,25 +23,22 @@ function Side({
     }
   }, [setCurrentNote, noteList, useParams]);
 
-  //options
   const options = {
-    month: "long", 
     year: "numeric",
+    month: "long",
     day: "numeric",
     hour: "numeric",
     minute: "numeric",
   };
 
-  //date
   const formatDate = (when) => {
     const formatted = new Date(when).toLocaleString("en-US", options);
-    if (formatted === "Date is invalid") {
+    if (formatted === "Invalid Date") {
       return "";
     }
     return formatted;
   };
 
-  // new note button
   if (!newNoteAdded || noteList.length == 0) {
     return (
       <div id="sideBox">
@@ -57,7 +53,6 @@ function Side({
     );
   }
 
-  // side page formatting
   return (
     <>
       <div id="sideBox">

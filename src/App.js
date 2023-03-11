@@ -94,7 +94,7 @@ function App() {
     <>
       <div id="top">
         <div id="title">Lotion</div>
-        <div id="subTitle">Like Notion, but dripped.</div>
+        <div id="subTitle">Like Notion, but different.</div>
         <div id="icon">
           <button id="enableSide" onClick={toggleSide}>
             &#9776;

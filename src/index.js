@@ -7,6 +7,7 @@ import Main from "./Main";
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Navigate } from "react-router-dom";
+import "react-quill/dist/quill.snow.css";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
